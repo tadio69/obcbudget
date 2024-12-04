@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="404e3bec-8cbd-4817-a8a5-23a8a82cdaa1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="num" class="java.lang.Integer"/>
+	<field name="region" class="java.lang.String"/>
+	<field name="centreregroupement" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isUsingCache="false">
+				<reportElement mode="Transparent" x="0" y="0" width="555" height="802" uuid="1909285d-1829-40f9-9078-dfdb51b8dced"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\obcbudget\\src\\main\\java\\images\\logoOBC3.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<image>
+				<reportElement x="252" y="0" width="69" height="67" uuid="c65c06d8-becd-4bc7-a223-6750a933c2b7"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\obcbudget\\src\\main\\java\\images\\logoOBC.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="349" y="0" width="196" height="14" uuid="58a95e8b-6fc6-46f5-8a85-6bd1a0eae840"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DU CAMEROUN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="14" width="196" height="15" uuid="1afdeb0e-0a10-4858-86e5-5bbbd17ab424"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Paix-Travail-Patrie]]></text>
+			</staticText>
+			<line>
+				<reportElement x="426" y="26" width="48" height="1" uuid="b1943323-0df7-4e46-93c9-382dc9ee6cb1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="3" width="196" height="13" uuid="525d5f84-cf64-49d9-bd45-2e8e8c69f83d"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[MINISTERE DES ENSEIGNEMENTS SECONDAIRES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="17" width="48" height="1" uuid="d154208b-5319-4f5b-b639-e62edc6d3644"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="18" width="196" height="11" uuid="e83dd6e3-3b43-4b85-9240-c190a43241dd"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OFFICE DU BACCALAUREAT DU CAMEROUN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="29" width="48" height="1" uuid="7b0fb249-b3f6-4e56-a15d-8b01cc6a235b"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="30" width="196" height="11" uuid="e4c0e592-97f3-41cd-a986-2a390c7356b2"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIVISION DES EXAMENS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="41" width="48" height="1" uuid="816fcd51-a3cf-4da6-a3b3-0b45239d12ae"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="0" width="389" height="47" uuid="b3710c1f-c434-4b53-aa33-b68c12c02e2d"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CENTRES DE REGROUPEMENT NON RATTACHES AUX CENTRES DE VENTILATION]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="54" height="23" uuid="da824c37-bb7c-4626-914c-6327ccf47b9d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Num]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="290" height="23" uuid="a25565cb-078a-473b-9d50-f59486ffeea5"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Centre de regroupement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="0" width="211" height="23" uuid="0e36b04d-348c-4d65-a72e-86b1534af164"/>
+				<box rightPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Région]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="54" height="29" uuid="4a793281-f72f-4beb-a778-8cf8dd058127"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="0" width="290" height="29" uuid="dec829ea-b71b-4377-86b1-9f0e56789ffe"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{centreregroupement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="211" height="29" uuid="769e3544-32c5-4c0e-9fe8-27e18c4ce6a2"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="25"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="282" y="0" width="219" height="20" uuid="cef67f61-b140-411d-91cd-622610715e47"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" sur"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="501" y="0" width="52" height="20" uuid="5a7bd7a4-deae-4e34-8982-ae09bc70b1df"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="16" y="4" width="208" height="20" uuid="d4b243b8-38b4-4c56-b741-21c9299b4e37"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

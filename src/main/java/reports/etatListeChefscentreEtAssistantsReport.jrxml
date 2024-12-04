@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb50e01a-a183-4b8d-bf3e-cd3ebab22790">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="563"/>
+	<field name="region" class="java.lang.String"/>
+	<field name="session" class="java.lang.Integer"/>
+	<field name="examen" class="java.lang.String"/>
+	<field name="num" class="java.lang.Integer"/>
+	<field name="souscentre" class="java.lang.String"/>
+	<field name="liaisonDresBool" class="java.lang.Boolean"/>
+	<field name="liaisonCentrebilBool" class="java.lang.Boolean"/>
+	<field name="fraistransBool" class="java.lang.Boolean"/>
+	<field name="megacentreBool" class="java.lang.Boolean"/>
+	<field name="prime" class="java.lang.Integer"/>
+	<field name="personnel" class="java.lang.String"/>
+	<group name="regionGroup">
+		<groupExpression><![CDATA[$F{region}]]></groupExpression>
+		<groupHeader>
+			<band height="22">
+				<staticText>
+					<reportElement x="0" y="0" width="237" height="22" uuid="673b4f8e-9676-4338-818e-e54dba5cada6"/>
+					<box rightPadding="5">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REGION :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="237" y="0" width="565" height="22" uuid="add58a08-cea3-482c-bd65-0fca026d78bd"/>
+					<box leftPadding="5">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="803" height="555" uuid="a0757c4b-318b-4573-a7eb-e97d72d7b8b7"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\obcbudget\\src\\main\\java\\images\\logoOBC3.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="12" width="196" height="11" uuid="b42ecc99-ba28-4bda-8d5e-6296e93bfec3"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OFFICE DU BACCALAUREAT DU CAMEROUN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="79" y="49" width="48" height="1" uuid="e7f3e31c-6c70-465d-9960-501c5cf8e1ac"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="596" y="28" width="196" height="15" uuid="014727bc-af40-4b63-81a1-fd7066496356"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Paix-Travail-Patrie]]></text>
+			</staticText>
+			<line>
+				<reportElement x="673" y="40" width="48" height="1" uuid="9c2e6795-5e45-430c-91bb-6b218914fb8d"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="5" y="51" width="196" height="15" uuid="58d487ac-4ca3-45bd-914a-4d609cd14a5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[B.P.: 13904- TEL. 230.55.66/203.55.67 YAOUNDE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="380" y="12" width="69" height="67" uuid="b2c25432-e353-46e1-b2b9-43306a759ce0"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\obcbudget\\src\\main\\java\\images\\logoOBC.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="5" y="33" width="196" height="11" uuid="fdd1c3ac-0ca7-4b98-89db-6b0c79523816"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIRECTION]]></text>
+			</staticText>
+			<line>
+				<reportElement x="79" y="26" width="48" height="1" uuid="4e262145-213a-4897-9f35-165da694062b"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="596" y="14" width="196" height="14" uuid="78aa16ed-e4d6-4104-a841-2572b59c944e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DU CAMEROUN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="81" splitType="Stretch">
+			<textField>
+				<reportElement x="629" y="5" width="81" height="20" uuid="6cc73317-838a-40c7-b632-e38c517286ad"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{session}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="103" y="3" width="447" height="22" uuid="6d551d59-c03e-4ff0-816d-015d383ec4b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTE DES CHEFS DE CENTRE/SOUS-CENTRE ET ASSISTANTS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="84" height="40" uuid="277f0d08-25d4-466f-928a-6f6a12ab63a8"/>
+				<box rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXAMEN(S) :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="35" width="718" height="40" uuid="e3c2b6cf-31b4-4532-b9c0-656b0dbf5402"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{examen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="566" y="5" width="63" height="20" uuid="d4f0dcb1-ade6-4772-9dba-3dfca826450d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SESSION :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="31" height="39" uuid="3becb8d4-650f-4ec2-8724-d207e732ff4e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="0" width="209" height="39" uuid="0dcff3be-5e5c-41f6-9e62-048eb0cfdf4f"/>
+				<box leftPadding="0">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Noms et prénoms]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="0" width="84" height="39" uuid="a01167ea-4e68-4906-8fb4-271bae6a347a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Liaison avec la DDES/DRES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="531" y="0" width="102" height="39" uuid="83da593a-cbb3-4c3b-8a50-1c3b3fbada26"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Liaison avec le centre de billetage]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="633" y="0" width="48" height="39" uuid="844362df-8419-4530-bac6-25c460042353"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Frais de transport]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="681" y="0" width="44" height="39" uuid="c9e924a2-25d9-45e8-a160-43f9ca22551a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mega centre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="0" width="77" height="39" uuid="50b8aacf-c3cf-46b8-80db-869df0c03679"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prime supplémentaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="0" width="207" height="39" uuid="ce9da4bf-6edc-46e5-9762-27aec23bec13"/>
+				<box leftPadding="0">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Centre ou sous-centre]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="237" y="0" width="210" height="52" uuid="4f79e633-c034-4ace-99e9-331fc13297f1"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{personnel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="30" height="52" uuid="5ea2b71d-4233-4901-8241-01d2a75ba3c9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="31" y="0" width="206" height="52" uuid="5e751d6e-0ed7-4952-99f3-fbb06afd37b4"/>
+				<box leftPadding="5">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{souscentre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="0" width="86" height="52" uuid="d980663e-02a1-4465-9669-414ca9f496b9"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{liaisonDresBool}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="533" y="0" width="100" height="52" uuid="88e71fb6-b1d1-4474-a2c1-c7c5743c1894"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{liaisonCentrebilBool}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="633" y="0" width="48" height="52" uuid="4d57e70d-6b70-458d-ab47-77d90ad879da"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fraistransBool}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="0" width="44" height="52" uuid="0166e5fd-3285-4d5d-aa2c-d4d3514fd854"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{megacentreBool}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="725" y="0" width="78" height="52" uuid="96f5c0dd-142e-4ed0-ac19-e3a829cb9622"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{prime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="517" y="1" width="52" height="20" uuid="e1fa5b76-4898-4904-a63d-94f848444bd2"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="10" y="2" width="208" height="20" uuid="117f63a2-dd41-4028-b8c0-d758985298cd"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="298" y="2" width="219" height="20" uuid="31fa6d2d-60c5-4aaa-959b-13747353234d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" sur"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

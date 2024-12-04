@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+    <!-- couches applicatives -->
+    <!-- 1-couche dao -->
+    <bean id="caissedao" class="couche_dao.CaisseDao" />
+    <bean id="caissesportdao" class="couche_dao.CaissesportDao" />
+    <bean id="centredao" class="couche_dao.CentreDao" />
+    <bean id="departementdao" class="couche_dao.DepartementDao" />
+    <bean id="arrondissementdao" class="couche_dao.ArrondissementDao" />
+    <bean id="etablissementdao" class="couche_dao.EtablissementDao" />
+    <bean id="examendao" class="couche_dao.ExamenDao" />
+    <bean id="naturedao" class="couche_dao.NatureDao" />
+    <bean id="nbepreuveprofdao" class="couche_dao.NbepreuveprofDao" />
+    <bean id="optiondao" class="couche_dao.OptionDao" />
+    <bean id="personneldao" class="couche_dao.PersonnelDao" />
+    <bean id="regiondao" class="couche_dao.RegionDao" />
+    <bean id="rubriquetatdao" class="couche_dao.RubriquetatDao" />
+    <bean id="sessiondao" class="couche_dao.SessionDao" />
+    <bean id="souscentredao" class="couche_dao.SouscentreDao" />
+    <bean id="statistiquedao" class="couche_dao.StatistiqueDao" />
+    <bean id="utilisateurdao" class="couche_dao.UtilisateurDao" />
+    <bean id="categoriedao" class="couche_dao.CategorieDao" />
+    <bean id="fonctiondao" class="couche_dao.FonctionDao" />
+    <bean id="activitedao" class="couche_dao.ActiviteDao" />
+    <bean id="specialisationdao" class="couche_dao.SpecialisationDao" />
+    <bean id="stataptesdao" class="couche_dao.StataptesDao" />
+    <bean id="scentaplusdao" class="couche_dao.ScentaplusDao" />
+    <bean id="centredispatchingdao" class="couche_dao.CentredispatchingDao" />
+    <bean id="secretariatdao" class="couche_dao.SecretariatDao" />  
+    <bean id="secteurcouvdao" class="couche_dao.SecteurcouvDao" />
+    <bean id="bureaudao" class="couche_dao.BureauDao" />
+    <bean id="naturesecretariatdao" class="couche_dao.NaturesecretariatDao" />
+    <bean id="groupedao" class="couche_dao.GroupeDao" />
+    <bean id="groupedexamendao" class="couche_dao.GroupedexamenDao" />
+    <bean id="rubriquedegroupedao" class="couche_dao.RubriquedegroupeDao" />
+    <bean id="familledao" class="couche_dao.FamilleDao" />
+    <bean id="rattachdispatchingdao" class="couche_dao.RattachdispatchingDao" />
+    <bean id="grandcentredao" class="couche_dao.GrandcentreDao" />
+    <bean id="centrebilletagedao" class="couche_dao.CentrebilletageDao" />
+    <bean id="rattachetabdao" class="couche_dao.RattachetabDao" />
+    <bean id="rattachcentredao" class="couche_dao.RattachcentreDao" />
+    <bean id="rattachscentredao" class="couche_dao.RattachscentreDao" />
+    <bean id="elementsurvdeficientdao" class="couche_dao.ElementsurvdeficientDao" />
+    <bean id="qualitedao" class="couche_dao.QualiteDao" />
+    <bean id="intervenantdao" class="couche_dao.IntervenantDao" />
+    <bean id="intervsecdao" class="couche_dao.IntervsecDao" />
+    <bean id="intervjurytidao" class="couche_dao.IntervjurytiDao" />
+    <bean id="nbcopiesdelibdao" class="couche_dao.NbcopiesdelibDao" />
+    <bean id="nbcopiesdispatcheesdao" class="couche_dao.NbcopiesdispatcheesDao" />
+    <bean id="rattachregroupementdao" class="couche_dao.RattachregroupementDao" />
+    <bean id="nbchefsalledao" class="couche_dao.NbchefsalleDao" />
+    <bean id="jurycorrigedao" class="couche_dao.JurycorrigeDao" />
+    <bean id="sousfamilledao" class="couche_dao.SousfamilleDao" />
+    <bean id="optiond1sousfamilledao" class="couche_dao.Optiond1sousfamilleDao" />
+    <bean id="rattachventilationdao" class="couche_dao.RattachventilationDao" />
+    <bean id="eltacmtemoindao" class="couche_dao.EltacmtemoinDao" />
+    <bean id="jurytemoindao" class="couche_dao.JurytemoinDao" />
+    <bean id="jurydeldao" class="couche_dao.JurydelDao" />
+    <bean id="eltcmpratique2dao" class="couche_dao.Eltcmpratique2Dao" />
+    <bean id="eltcmpratique2sansnomsdao" class="couche_dao.Eltcmpratique2sansnomsDao" />
+    <bean id="eltjurypratique2dao" class="couche_dao.Eltjurypratique2Dao" />
+    <bean id="jurypratique2dao" class="couche_dao.Jurypratique2Dao" />
+    <bean id="jurydeladmissdao" class="couche_dao.JurydeladmissDao" />  
+    <bean id="epreuvedao" class="couche_dao.EpreuveDao" />  
+    <bean id="eltetatmoepreuvefacdao" class="couche_dao.EltetatmoepreuvefacDao" />  
+    <bean id="mopratiquestidao" class="couche_dao.MopratiquestiDao" /> 
+    <bean id="matoeuvresfdao" class="couche_dao.MatoeuvresfDao" />
+    <bean id="nbadmissiblesdao" class="couche_dao.NbadmissiblesDao" /> 
+    <bean id="matieredao" class="couche_dao.MatiereDao" /> 
+    <bean id="deplacecorrectdao" class="couche_dao.DeplacecorrectDao" /> 
+    <bean id="deplacepratiquedao" class="couche_dao.DeplacepratiqueDao" />
+    <bean id="dureepratiquedao" class="couche_dao.DureepratiqueDao" />
+    <bean id="mopratiqueedao" class="couche_dao.MopratiqueeDao" />  
+    <bean id="fmissprimchefcentredao" class="couche_dao.FmissprimchefcentreDao" /> 
+    <bean id="inscritsprivesdao" class="couche_dao.InscritsprivesDao" />
+    <bean id="eltcorrecttechdao" class="couche_dao.EltcorrecttechDao" /> 
+    <bean id="ponderationdao" class="couche_dao.PonderationDao" /> 
+    <bean id="eltpratiquetidao" class="couche_dao.EltpratiquetiDao" /> 
+    <bean id="eltpratiquesttdao" class="couche_dao.EltpratiquesttDao" />
+    <bean id="eltpratiquinfodao" class="couche_dao.EltpratiquinfoDao" /> 
+    <bean id="eltpratique1inddao" class="couche_dao.Eltpratique1indDao" />
+    <bean id="eltvacpratepreuvefacdao" class="couche_dao.EltvacpratepreuvefacDao" />
+    <bean id="elttranscriptepreuvedao" class="couche_dao.ElttranscriptepreuveDao" />
+    <bean id="rattachventilationspecialedao" class="couche_dao.RattachventilationspecialeDao" />
+    <bean id="elttranscriptcopiedao" class="couche_dao.ElttranscriptcopieDao" />
+    <bean id="nbentetesdao" class="couche_dao.NbentetesDao" />
+    <bean id="nbinaptesdao" class="couche_dao.NbinaptesDao" />
+    <bean id="nblivretsdao" class="couche_dao.NblivretsDao" />
+    <bean id="nbnotesprat2dao" class="couche_dao.Nbnotesprat2Dao" />
+    <bean id="eltcomevaldao" class="couche_dao.EltcomevalDao" />
+    <bean id="nbcandlibresgdao" class="couche_dao.NbcandlibresgDao" />
+    <bean id="nbcandlibrestpdao" class="couche_dao.NbcandlibrestpDao" />
+    <bean id="eltharmodao" class="couche_dao.EltharmoDao" />
+    <bean id="eltcoordodao" class="couche_dao.EltcoordoDao" />
+    <bean id="eltpermanencedao" class="couche_dao.EltpermanenceDao" />
+    <bean id="statsecretariatdao" class="couche_dao.StatsecretariatDao" />
+    <bean id="intervenantsecretdao" class="couche_dao.IntervenantsecretDao" />
+    <bean id="nbcandepreuvefacdao" class="couche_dao.NbcandepreuvefacDao" />
+    <bean id="nbchefsallesecretdao" class="couche_dao.NbchefsallesecretDao" />
+    <bean id="jurycorrigesecretdao" class="couche_dao.JurycorrigesecretDao" />
+    <bean id="eltcorrecttechsecretdao" class="couche_dao.EltcorrecttechsecretDao" />
+    <bean id="eltjuryanodao" class="couche_dao.EltjuryanoDao" />
+    <bean id="nbcartonsdao" class="couche_dao.NbcartonsDao" />
+    <bean id="combinedao" class="couche_dao.CombineDao" />
+    <bean id="combinetoutdao" class="couche_dao.CombinetoutDao" />
+    <bean id="specialisationsecdao" class="couche_dao.SpecialisationsecDao" />
+    <bean id="eltcmpratique2secretdao" class="couche_dao.Eltcmpratique2secretDao" />
+    <bean id="eltcmpratique2sansnomsecretdao" class="couche_dao.Eltcmpratique2sansnomsecretDao" />
+    <bean id="eltpratiquesttsecretdao" class="couche_dao.EltpratiquesttsecretDao" />
+    <!-- 2-couche metier -->
+    <bean id="metier" class="couche_metier.Metier">
+        <property name="caisseDao" ref="caissedao" /> 
+        <property name="caissesportDao" ref="caissesportdao" /> 
+        <property name="centreDao" ref="centredao" /> 
+        <property name="departementDao" ref="departementdao" />
+        <property name="arrondissementDao" ref="arrondissementdao" />
+        <property name="etablissementDao" ref="etablissementdao" />
+        <property name="examenDao" ref="examendao" />
+        <property name="natureDao" ref="naturedao" />
+        <property name="nbepreuveprofDao" ref="nbepreuveprofdao" />
+        <property name="optionDao" ref="optiondao" />
+        <property name="personnelDao" ref="personneldao" />
+        <property name="regionDao" ref="regiondao" />
+        <property name="rubriquetatDao" ref="rubriquetatdao" />
+        <property name="sessionDao" ref="sessiondao" />
+        <property name="souscentreDao" ref="souscentredao" />
+        <property name="statistiqueDao" ref="statistiquedao" />
+        <property name="utilisateurDao" ref="utilisateurdao" />
+        <property name="categorieDao" ref="categoriedao" />
+        <property name="fonctionDao" ref="fonctiondao" />
+        <property name="activiteDao" ref="activitedao" />
+        <property name="specialisationDao" ref="specialisationdao" />
+        <property name="stataptesDao" ref="stataptesdao" />
+        <property name="scentaplusDao" ref="scentaplusdao" />
+        <property name="centredispatchingDao" ref="centredispatchingdao" />
+        <property name="secretariatDao" ref="secretariatdao" />
+        <property name="secteurcouvDao" ref="secteurcouvdao" />
+        <property name="bureauDao" ref="bureaudao" />
+        <property name="naturesecretariatDao" ref="naturesecretariatdao" />
+        <property name="groupeDao" ref="groupedao" />
+        <property name="groupedexamenDao" ref="groupedexamendao" />
+        <property name="rubriquedegroupeDao" ref="rubriquedegroupedao" />
+        <property name="familleDao" ref="familledao" />
+        <property name="rattachdispatchingDao" ref="rattachdispatchingdao" />
+        <property name="grandcentreDao" ref="grandcentredao" />
+        <property name="centrebilletageDao" ref="centrebilletagedao" />
+        <property name="rattachetabDao" ref="rattachetabdao" />
+        <property name="rattachscentreDao" ref="rattachscentredao" />
+        <property name="rattachcentreDao" ref="rattachcentredao" />
+        <property name="elementsurvdeficientDao" ref="elementsurvdeficientdao" />
+        <property name="qualiteDao" ref="qualitedao" />
+        <property name="intervenantDao" ref="intervenantdao" />
+        <property name="intervsecDao" ref="intervsecdao" />
+        <property name="intervjurytiDao" ref="intervjurytidao" />
+        <property name="nbcopiesdelibDao" ref="nbcopiesdelibdao" />
+        <property name="nbcopiesdispatcheesDao" ref="nbcopiesdispatcheesdao" />
+        <property name="rattachregroupementDao" ref="rattachregroupementdao" />
+        <property name="nbchefsalleDao" ref="nbchefsalledao" />
+        <property name="jurycorrigeDao" ref="jurycorrigedao" />
+        <property name="sousfamilleDao" ref="sousfamilledao" />
+        <property name="optiond1sousfamilleDao" ref="optiond1sousfamilledao" />
+        <property name="rattachventilationDao" ref="rattachventilationdao" /> 
+        <property name="eltacmtemoinDao" ref="eltacmtemoindao" /> 
+        <property name="jurytemoinDao" ref="jurytemoindao" /> 
+        <property name="jurydelDao" ref="jurydeldao" />   
+        <property name="eltcmpratique2Dao" ref="eltcmpratique2dao" />
+        <property name="eltcmpratique2sansnomsDao" ref="eltcmpratique2sansnomsdao" />
+        <property name="eltjurypratique2Dao" ref="eltjurypratique2dao" /> 
+        <property name="jurypratique2Dao" ref="jurypratique2dao" /> 
+        <property name="jurydeladmissDao" ref="jurydeladmissdao" />    
+        <property name="epreuveDao" ref="epreuvedao" /> 
+        <property name="eltetatmoepreuvefacDao" ref="eltetatmoepreuvefacdao" />
+        <property name="mopratiquestiDao" ref="mopratiquestidao" />
+        <property name="matoeuvresfDao" ref="matoeuvresfdao" />
+        <property name="nbadmissiblesDao" ref="nbadmissiblesdao" />
+        <property name="matiereDao" ref="matieredao" />
+        <property name="deplacecorrectDao" ref="deplacecorrectdao" />
+        <property name="deplacepratiqueDao" ref="deplacepratiquedao" />
+        <property name="dureepratiqueDao" ref="dureepratiquedao" />
+        <property name="mopratiqueeDao" ref="mopratiqueedao" />
+        <property name="fmissprimchefcentreDao" ref="fmissprimchefcentredao" />
+        <property name="inscritsprivesDao" ref="inscritsprivesdao" />
+        <property name="eltcorrecttechDao" ref="eltcorrecttechdao" />
+        <property name="ponderationDao" ref="ponderationdao" />
+        <property name="eltpratiquetiDao" ref="eltpratiquetidao" />
+        <property name="eltpratiquesttDao" ref="eltpratiquesttdao" />
+        <property name="eltpratiquinfoDao" ref="eltpratiquinfodao" />
+        <property name="eltpratique1indDao" ref="eltpratique1inddao" />
+        <property name="elttranscriptepreuveDao" ref="elttranscriptepreuvedao" />
+        <property name="eltvacpratepreuvefacDao" ref="eltvacpratepreuvefacdao" />
+        <property name="rattachventilationspecialeDao" ref="rattachventilationspecialedao" />
+        <property name="elttranscriptcopieDao" ref="elttranscriptcopiedao" />
+        <property name="nbentetesDao" ref="nbentetesdao" />
+        <property name="nbinaptesDao" ref="nbinaptesdao" />
+        <property name="nblivretsDao" ref="nblivretsdao" />
+        <property name="nbnotesprat2Dao" ref="nbnotesprat2dao" />
+        <property name="eltcomevalDao" ref="eltcomevaldao" />
+        <property name="nbcandlibresgDao" ref="nbcandlibresgdao" />
+        <property name="nbcandlibrestpDao" ref="nbcandlibrestpdao" />
+        <property name="eltharmoDao" ref="eltharmodao" />
+        <property name="eltcoordoDao" ref="eltcoordodao" />
+        <property name="eltpermanenceDao" ref="eltpermanencedao" />
+        <property name="statsecretariatDao" ref="statsecretariatdao" />
+        <property name="intervenantsecretDao" ref="intervenantsecretdao" />
+        <property name="nbcandepreuvefacDao" ref="nbcandepreuvefacdao" />
+        <property name="nbchefsallesecretDao" ref="nbchefsallesecretdao" />
+        <property name="jurycorrigesecretDao" ref="jurycorrigesecretdao" />
+        <property name="eltcorrecttechsecretDao" ref="eltcorrecttechsecretdao" />
+        <property name="eltjuryanoDao" ref="eltjuryanodao" />
+        <property name="nbcartonsDao" ref="nbcartonsdao" />
+        <property name="combineDao" ref="combinedao" />
+        <property name="combinetoutDao" ref="combinetoutdao" />
+        <property name="specialisationsecDao" ref="specialisationsecdao" />
+        <property name="eltcmpratique2secretDao" ref="eltcmpratique2secretdao" />
+        <property name="eltcmpratique2sansnomsecretDao" ref="eltcmpratique2sansnomsecretdao" />
+        <property name="eltpratiquesttsecretDao" ref="eltpratiquesttsecretdao" />
+    </bean>
+        
+    <!-- couche de persistance JPA -->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <!--
+                    <property name="showSql" value="true" />
+                -->
+                <property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect" />
+                <property name="generateDdl" value="true" />
+            </bean>
+        </property>
+        <property name="loadTimeWeaver">
+            <bean class="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver" />
+        </property>
+    </bean>
+    
+    <!-- la source de donnéees DBCP -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://localhost:5433/obcbudgetdb" />
+        <property name="username" value="postgres" />
+        <property name="password" value="tapite69" />      
+    </bean>
+
+    <!-- le gestionnaire de transactions -->
+    <tx:annotation-driven transaction-manager="txManager" />
+    <bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+
+    <!-- traduction des exceptions -->
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+    <!-- annotations de persistance -->
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+</beans>

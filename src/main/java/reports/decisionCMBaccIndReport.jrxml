@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41a84d00-f552-4a15-9858-2e9b3aaa974b">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="288"/>
+	<field name="numreg" class="java.lang.Integer"/>
+	<field name="region" class="java.lang.String"/>
+	<field name="souscentre" class="java.lang.String"/>
+	<field name="pers" class="java.lang.String"/>
+	<field name="fonctprov" class="java.lang.String"/>
+	<field name="examen" class="java.lang.String"/>
+	<field name="session" class="java.lang.Integer"/>
+	<field name="numscentre" class="java.lang.String"/>
+	<field name="numsec" class="java.lang.String"/>
+	<field name="qualite" class="java.lang.String"/>
+	<field name="article1" class="java.lang.String"/>
+	<field name="pied" class="java.lang.String"/>
+	<group name="regionGroup">
+		<groupExpression><![CDATA[$F{region}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<staticText>
+					<reportElement x="33" y="0" width="65" height="30" uuid="4e0fa452-f33d-43ee-83c0-4a1fc132c139"/>
+					<box leftPadding="5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[Région :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="98" y="0" width="457" height="30" uuid="a4ecc901-4af3-4faf-bb57-d98e80535406"/>
+					<box leftPadding="5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true" isUnderline="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="0" width="33" height="30" uuid="1fae3175-cb8a-4bd8-abb1-467ceffdec0e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numreg}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="souscentreGroup">
+		<groupExpression><![CDATA[$F{souscentre}]]></groupExpression>
+		<groupHeader>
+			<band height="26">
+				<textField>
+					<reportElement x="0" y="0" width="33" height="26" uuid="0056964a-741b-4071-a528-a48b54626219"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{numscentre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="120" y="0" width="435" height="26" uuid="3be4f98b-bc69-41fc-a1e8-76ae0035898a"/>
+					<box leftPadding="5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{souscentre}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="33" y="0" width="87" height="26" uuid="fc277126-f3d7-4ba0-bd7f-9b7525c41148"/>
+					<box leftPadding="5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sous-centre :]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="555" height="555" uuid="ed048a2a-b74b-4b52-93f7-2c28d31576bd"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\obcbudget\\src\\main\\java\\images\\logoOBC3.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="382" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="41" width="196" height="11" uuid="d0da08a0-929d-4c3f-84dd-3d09b1c379dc"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OFFICE DU BACCALAUREAT DU CAMEROUN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="86" y="53" width="48" height="1" uuid="b68d7a1e-cf5a-4889-968f-157e9fa34249"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="65" width="196" height="11" uuid="6d0dd51a-2a6a-47de-bd13-dae6002329b4"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIVISION DES EXAMENS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="76" width="48" height="1" uuid="2a6ffe29-56c2-4223-8ff7-c2cf0ccfed09"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="27" width="196" height="11" uuid="84e0e442-10b1-4a33-8c3a-eab279a47419"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[MINISTERE DES ENSEIGNEMENTS SECONDAIRES]]></text>
+			</staticText>
+			<line>
+				<reportElement x="86" y="39" width="48" height="1" uuid="4262feaf-bda1-412b-8593-8a1c3d10c60f"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="347" y="12" width="196" height="11" uuid="6d0977ef-b0c1-442a-a4e9-f73b2d8a513c"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Peace-Work-FatherLand]]></text>
+			</staticText>
+			<line>
+				<reportElement x="424" y="23" width="48" height="1" uuid="7d233c1f-e0eb-4231-a138-e7acffd6ca03"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="3" width="196" height="11" uuid="6f133f76-5bee-4f20-83ea-c117228696e3"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[REPUBLIQUE DU CAMEROUN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="87" y="25" width="48" height="1" uuid="42d718b9-fc77-4d9d-b177-3155f213922d"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="10" y="13" width="196" height="11" uuid="becf5296-9521-4c07-a081-25c386759633"/>
+				<textElement textAlignment="Center">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Paix-Travail-Patrie]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="54" width="196" height="11" uuid="e40a9443-2e50-473a-89cb-1a88a78790c2"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIRECTION]]></text>
+			</staticText>
+			<line>
+				<reportElement x="85" y="64" width="45" height="1" uuid="bfe34eae-66d1-4c91-a492-f080830e3620"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="347" y="2" width="196" height="11" uuid="f956b5a6-b1a0-4c9e-9b21-1c69411aaf06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[REPUBLIC OF CAMEROON]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="25" width="196" height="11" uuid="e9dc081c-2526-4269-a1bd-64ee4df33227"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[MINISTRY OF SECONDARY EDUCATION]]></text>
+			</staticText>
+			<line>
+				<reportElement x="424" y="36" width="46" height="1" uuid="4816df7f-f20e-44db-96ff-6b36cc3daaba"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="347" y="37" width="196" height="11" uuid="04262067-14b3-4e65-a680-015dfe3a1898"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OFFICE DU BACCALAUREAT DU CAMEROUN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="424" y="48" width="48" height="1" uuid="cff305a7-c186-4cb2-b151-150cb61df9d7"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="347" y="49" width="196" height="11" uuid="25921881-f33a-4e53-9e09-53372e572a66"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIRECTORATE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="424" y="60" width="45" height="1" uuid="1db5cb56-37ce-4ec9-ad1f-dd4d497c3516"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="347" y="62" width="196" height="11" uuid="e8f72e60-5f36-4eb0-9459-6a8f5b141e8b"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF EXAMINATIONS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="424" y="73" width="44" height="1" uuid="5007db45-f35b-4b96-a45c-9024b0652db9"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="243" y="5" width="69" height="67" uuid="cd44fafc-de33-4c4f-84c1-b76fcadfe50e"/>
+				<imageExpression><![CDATA["C:\\Users\\DELL\\Documents\\NetBeansProjects\\obcbudget\\src\\main\\java\\images\\logoOBC.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="84" width="497" height="16" uuid="8ab92c10-aad9-40b8-bab4-2cada910f3b5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECISION N° _______/D/MINESEC/OBC/D/DA/DIVEX/CEESG du_______ ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="116" width="497" height="25" uuid="13755577-388c-4ac8-b3a4-12cc446d1810"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{examen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="497" y="86" width="58" height="14" uuid="3e81b308-2274-416c-8947-650b94e0d3c0"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Session ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="497" y="100" width="58" height="14" uuid="9a475306-9eb0-4a02-a21f-27d2d907b61a"/>
+				<box leftPadding="5"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{session}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="100" width="497" height="16" uuid="77996ec4-7ae8-40b2-85a5-aea11840fd46"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{qualite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="161" width="82" height="10" uuid="a527bdc3-d18c-4fb2-93ce-1c440fc8f8ac"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    la Constitution ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="171" width="555" height="10" uuid="91ddce87-9582-4aaa-9c7a-90bdb973dc11"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 2018/190 du 02 mars 2018 complétant certaines dispositions du Décret n°2011/408 du 09 décembre 2011  portant organisation du Gouvernement ;
+        ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="181" width="555" height="10" uuid="a651cc28-ba36-4468-b054-c3d8c1d42efe"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 2019/001 du 04 janvier 2019 portant nomination du Premier Ministre, Chef du Gouvernement ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="191" width="555" height="10" uuid="036e9321-e264-4f45-8f3f-05263ee7b40f"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 2019/002 du 04 janvier 2019 portant réaménagement du Gouvernement ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="201" width="555" height="10" uuid="4a47a625-ee21-4e5b-9c2f-c185ce57ef0d"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 2012/267 du 25 avril 2012 portant organisation du Ministère des Enseignements Secondaires ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="211" width="555" height="10" uuid="53ec5928-017c-450d-92da-7bdad5d14c3f"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 93/255 du 28 septembre 1993 portant création d’un Office du Baccalauréat du Cameroun modifié par le Décret n° 97/044 du 05 mars 1997 ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="221" width="555" height="10" uuid="a3929012-b2fc-4691-92cf-afb747434f83"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 2018/0135/PM du 31 janvier 2018 portant nomination du Directeur de l’Office du Baccalauréat du Cameroun ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="241" width="555" height="10" uuid="f075a1c9-b114-4e89-a767-7eeb8f7781cc"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    l’Arrêté n° 047/CAB/PM du 17 mai 1994 portant organisation administrative et financière de l’Office du Baccalauréat du Cameroun ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="280" width="555" height="10" uuid="acbb152c-135c-4de3-95a9-457699a6819f"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    l’Arrêté n° 07/20/MINEDUB/MINESEC du 30 septembre 2020 fixant le calendrier de l’année scolaire 2020/2021 en République du Cameroun ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="290" width="555" height="10" uuid="0df240f3-1b3a-4231-abae-8aa6a52ebc38"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    la Décision n° 02/21/MINESEC/SEESENSG/DECC/SDOEC du 05 janvier 2021 fixant le calendrier des Examens et des Concours de la session 2021 ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="300" width="553" height="19" uuid="83bd6b97-1d70-4e36-9bee-736ae9c86643"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    la Décision n° 164/21/D/MINESEC/SG/OBC/D/DIVEX du 26 mai 2021 portant réorganisation des centres et sous-centres d’examens de l’Enseignement Secondaire
+        Technique et Professionnel, session 2021 ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="319" width="555" height="10" uuid="334ffecd-4acb-41cd-badf-65afae1013a0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    les nécessités de service ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="329" width="555" height="20" uuid="81c811ff-524a-4402-84ec-d76e8eb0d289"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECIDE :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="352" width="495" height="30" uuid="ca2d1597-0981-4de0-b7ac-4657013f8234"/>
+				<box leftPadding="4"/>
+				<textElement verticalAlignment="Top">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{article1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="352" width="59" height="17" uuid="707b00d4-368b-4768-90b3-3fad75a49faf"/>
+				<textElement verticalAlignment="Top">
+					<font size="11" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 1er :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="231" width="555" height="10" uuid="927cec52-9c83-42f9-930c-d4659db55715"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    le Décret n° 95/035 du 24 février 1995 portant organisation des Baccalauréats de l’Enseignement Secondaire, ses divers modificatifs et textes subséquents ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="251" width="555" height="19" uuid="6113f151-510b-451d-a0cb-8ebbbd959afb"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    l’Arrêté n° 27/E/24/MINEDUC/IGPESG/IGPET/DEXC/DETP du 08 juillet 1994 portant organisation de l’Examen du Brevet de Technicien Industriel Masculin et ses divers 
+        modificatifs et additifs ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="270" width="555" height="10" uuid="8e0a1b2c-78c6-4bca-8c43-3f047a7ba686"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Vu    l’Arrêté n°121/13/MINESEC/IGE/IPTI du 30 mai 2013 portant réorganisation de l’examen des Brevets Professionnels Industriels au Cameroun ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="141" width="555" height="20" uuid="fcc6f879-c30f-4a1d-a217-24ce70615262"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LE MINISTRE DES ENSEIGNEMENTS SECONDAIRES,]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="2" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="33" y="0" width="292" height="29" uuid="190cff9a-fc3c-4245-80de-bf0118f76ed1"/>
+				<box leftPadding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pers}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="0" width="230" height="29" uuid="80877dfc-ee15-415b-968f-b19699dc5565"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fonctprov}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="33" height="29" uuid="56f80699-0371-4936-a1b1-3d7386cde653"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numsec}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="0" y="5" width="133" height="14" uuid="7660f544-4f78-42cc-8efc-830df8f19c97"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="5" width="190" height="14" uuid="40eaf25a-819e-4fd5-a91e-449fb584b961"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" sur"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="502" y="5" width="52" height="14" uuid="f16413ea-f3f8-4096-aed6-86785f6bbb14"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="5" width="177" height="14" uuid="c3adc1ca-b422-4b5f-a226-15f4fdf18fc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pied}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="231">
+			<staticText>
+				<reportElement x="349" y="101" width="206" height="17" uuid="211bf5cb-abee-4dfd-a5fa-d9d498011294"/>
+				<textElement verticalAlignment="Top">
+					<font size="11" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Yaoundé, le ________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="124" width="243" height="17" uuid="19bf23b4-134e-4d92-b1a6-4a0571600121"/>
+				<textElement verticalAlignment="Top">
+					<font size="11" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Le Ministre des Enseignements Secondaires]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="152" width="219" height="76" uuid="6b459e25-9604-4b7d-98bd-6cd6f148fdcd"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[- MINESEC/SEESEC/SG/IGS/IGE/DEST/DECC
+- OBC/D/DA/DIVEX
+- DRES
+- DDES
+- Intéressés
+- Archives / chrono
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="77" width="48" height="17" uuid="053bd848-003f-4d41-83a5-a95383dc6008"/>
+				<textElement verticalAlignment="Top">
+					<font size="11" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 3 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="77" width="506" height="17" uuid="bc389ff1-2c10-4c06-9546-59573d636a4c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[- La présente décision sera enregistrée, publiée et communiquée partout où besoin sera.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="135" width="71" height="17" uuid="6cb87a2a-77a8-41db-b176-7bfdbe7d994c"/>
+				<textElement verticalAlignment="Top">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Ampliations :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="19" width="187" height="53" uuid="037a57dd-8a49-4c9c-ad3a-67becc1101c4"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[- E=Ecrit ;
+- P=Pratique 1 ;
+- EP=Ecrit et pratique 1 ;
+- CE=Ecrit et correction ;
+
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="2" width="506" height="17" uuid="f38b140d-6c49-479b-923e-7284a4856590"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[- Activités concernées :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="2" width="48" height="17" uuid="cfe6ae46-7550-4b7f-8306-9e65301ce05f"/>
+				<textElement verticalAlignment="Top">
+					<font size="11" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Article 2 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="19" width="297" height="53" uuid="39814814-906e-4f0a-9cac-1336d17b9e1f"/>
+				<textElement verticalAlignment="Top">
+					<font size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[- CEP=Ecrit, correction et pratique 1 ;
+- CP=correction et pratique 1 ;
+- CDE=Ecrit, Correction et délibération d'admissibilité ;
+- CDEP=Ecrit, Correction, pratique 1 et délibération d'admissibilité.
+
+]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

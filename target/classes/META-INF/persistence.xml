@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="obcbudgetPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>couche_jpa.Caisse</class>
+    <class>couche_jpa.Centre</class>
+    <class>couche_jpa.Departement</class>
+    <class>couche_jpa.Etablissement</class>
+    <class>couche_jpa.Examen</class>
+    <class>couche_jpa.Nature</class>
+    <class>couche_jpa.Nbepreuveprof</class>
+    <class>couche_jpa.Option</class>
+    <class>couche_jpa.Personnel</class>
+    <class>couche_jpa.Region</class>
+    <class>couche_jpa.Rubriquetat</class>
+    <class>couche_jpa.Session</class>
+    <class>couche_jpa.Souscentre</class>
+    <class>couche_jpa.Statistique</class>
+    <class>couche_jpa.Utilisateur</class>
+    <class>couche_jpa.Arrondissement</class>
+    <class>couche_jpa.Categorie</class>
+    <class>couche_jpa.Fonction</class>
+    <class>couche_jpa.Activite</class>
+    <class>couche_jpa.Specialisation</class>
+    <class>couche_jpa.Stataptes</class>
+    <class>couche_jpa.Scentaplus</class>
+    <class>couche_jpa.Centredispatching</class>
+    <class>couche_jpa.Secretariat</class>
+    <class>couche_jpa.Secteurcouv</class>
+    <class>couche_jpa.Bureau</class>
+    <class>couche_jpa.Naturesecretariat</class>
+    <class>couche_jpa.Groupedexamen</class>
+    <class>couche_jpa.Groupe</class>
+    <class>couche_jpa.Rubriquedegroupe</class>
+    <class>couche_jpa.Caissesport</class>
+    <class>couche_jpa.Famille</class>
+    <class>couche_jpa.Grandcentre</class>
+    <class>couche_jpa.Rattachdispatching</class>
+    <class>couche_jpa.Centrebilletage</class>
+    <class>couche_jpa.Rattachcentre</class>
+    <class>couche_jpa.Rattachscentre</class>
+    <class>couche_jpa.Famgrandcentre</class>
+    <class>couche_jpa.Famcentdispatching</class>
+    <class>couche_jpa.Rattachetab</class>
+    <class>couche_jpa.Statsecretariat</class>
+    <class>couche_jpa.Intervenantsecret</class>
+    <class>couche_jpa.Nbcandepreuvefac</class>
+    <class>couche_jpa.Jurycorrigesecret</class>
+    <class>couche_jpa.Nbchefsallesecret</class>
+    <class>couche_jpa.Eltcorrecttechsecret</class>
+    <class>couche_jpa.Eltjuryano</class>
+    <class>couche_jpa.Arrondissement_1</class>
+    <class>couche_jpa.Souscentre_1</class>
+    <class>couche_jpa.Groupe_1</class>
+    <class>couche_jpa.Qualite_1</class>
+    <class>couche_jpa.Nbcartons</class>
+    <class>couche_jpa.Combine</class>
+    <class>couche_jpa.Combine_1</class>
+    <class>couche_jpa.Combinetout</class>
+    <class>couche_jpa.Examsecretariat</class>
+    <class>couche_jpa.Specialisationsec</class>
+    <class>couche_jpa.Eltcmpratique2secret</class>
+    <class>couche_jpa.Region_1</class>
+    <class>couche_jpa.Session_1</class>
+    <class>couche_jpa.Secretariat_1</class>
+    <class>couche_jpa.Etablissement_1</class>
+    <class>couche_jpa.Departement_1</class>
+    <class>couche_jpa.Eltcmpratique2sansnomsecret</class>
+    <class>couche_jpa.Eltvacpratepreuvefacsecret</class>
+    <class>couche_jpa.Epreuve_1</class>
+    <class>couche_jpa.Eltpratiquesttsecret</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/obcbudgetdb"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="tapite69"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="use_sql_comments" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
